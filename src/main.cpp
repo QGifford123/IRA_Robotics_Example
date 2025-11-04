@@ -64,15 +64,15 @@ void usercontrol(void) {
 
   while (1) {
     
-    RightFront.spin(forward, 20, percent)
+    RightFront.spin(forward, 20, percent);
 
-    while( "true" ) {
-      LeftFront.spin(reverse, 40);
-    }}
+    while( true ) {
+      LeftFront.spin(reverse, 40, percent);
+    }
 
-    MiddleRight.stop(holding);
+    RightMiddle.stop();
 
-    if( Controller.ButtonA.pressing );
+    if( Controller.ButtonA.pressing() );
 
       LeftMiddle.stop(brake);
 
